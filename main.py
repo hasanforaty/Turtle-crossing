@@ -37,5 +37,8 @@ while game_is_on:
     # check if player reached end point
     if player.ycor() > FINISH_LINE_Y:
         player.reset()
+    # check for coalition with cars
+    if car_manager.has_collided(player):
+        game_is_on = False
 
 screen.exitonclick()

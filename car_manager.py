@@ -35,3 +35,9 @@ class CarManager:
             if car.xcor() < max_x:
                 car.clear()
                 self.cars.remove(car)
+
+    def has_collided(self, target):
+        for car in self.cars:
+            if car.distance(target) < 25:
+                return True
+        return False
