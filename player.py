@@ -18,3 +18,8 @@ class Player(Turtle):
 
     def move(self):
         self.forward(MOVE_DISTANCE)
+
+    def reset(self):
+        self.hideturtle()
+        self.goto(STARTING_POSITION)
+        self.showturtle()

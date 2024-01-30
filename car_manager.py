@@ -34,6 +34,4 @@ class CarManager:
             car.forward(distance)
             if car.xcor() < max_x:
                 car.clear()
-                print("delete")
                 self.cars.remove(car)
-                print(len(self.cars))
