@@ -30,7 +30,7 @@ while game_is_on:
 
     # create car
     cars_in_screen = len(car_manager.cars)
-    create = random.randint(0, 3)
+    create = random.randint(0, 5)
     if create == 0 and cars_in_screen < 40:
         car_manager.create_random_car()
 
