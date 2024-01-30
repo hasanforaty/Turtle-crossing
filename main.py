@@ -1,9 +1,12 @@
 from turtle import Turtle, Screen
 from time import sleep
 from player import Player
+from car_manager import CarManager
+import random
 
 screen = Screen()
 player = Player()
+car_manager = CarManager()
 screen.setup(
     width=600,
     height=600,
@@ -17,10 +20,18 @@ screen.onkeypress(
     'w'
 )
 
-
 game_is_on = True
 while game_is_on:
     sleep(0.1)
     screen.update()
+
+    # create car
+    cars_in_screen = len(car_manager.cars)
+    create = random.randint(0, 3)
+    if create == 0 and cars_in_screen < 40:
+        car_manager.create_random_car()
+
+    # move cars
+    car_manager.move_cars(level=1)
 
 screen.exitonclick()
