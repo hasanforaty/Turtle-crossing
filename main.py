@@ -1,9 +1,10 @@
-from turtle import Turtle, Screen
+import random
 from time import sleep
+from turtle import Screen
+
+from car_manager import CarManager
 from player import Player, FINISH_LINE_Y
 from scoreboard import Scoreboard
-from car_manager import CarManager
-import random
 
 screen = Screen()
 player = Player()
